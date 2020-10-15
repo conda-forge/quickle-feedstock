@@ -1,5 +1,5 @@
 {% set name = "quickle" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9939a814363d360c02ef0ace06d2a2e944f4ad4d67080e4b8fe1e3d14bd71f85
+  sha256: 36ed14094c2abcf1a3aabd3d9e9740ed54ac97df53ae9fc91726d332d4a32e86
 
 build:
-  number: 1
-  skip: True  # [py<38]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  skip: true  # [py<38]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -32,7 +32,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'A quicker pickle'
+  summary: A quicker pickle
   description: |
     A fast and small serialization format for a subset of Python types. It's
     based off of pickle, but includes several optimizations and extensions.
