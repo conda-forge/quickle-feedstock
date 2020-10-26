@@ -1,5 +1,5 @@
 {% set name = "quickle" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 36ed14094c2abcf1a3aabd3d9e9740ed54ac97df53ae9fc91726d332d4a32e86
+  sha256: d7cefb80da715fa398392d7d157e8aab1e29447f90e45ea0f61f7363a9ee933f
 
 build:
   number: 0
